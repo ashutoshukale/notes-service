@@ -4,7 +4,7 @@ This is a lightweight Supabase backend service for managing personal notes. It s
 
 ---
 
-## 📐 Design Rationale
+## Design Rationale
 
 - **Primary Key**: UUIDs ensure global uniqueness and are compatible with Supabase defaults.
 - **user_id**: Tied to Supabase Auth's `auth.users`, enforces multi-user isolation.
