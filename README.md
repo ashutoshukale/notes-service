@@ -16,13 +16,18 @@ This is a lightweight Supabase backend service for managing personal notes. It s
 
 ## Setup & Deploy
 
-### 1. Create Supabase Project
+### 1. Clone the repo
+
+- git clone 
+- cd notes-service
+### 2. Create Supabase Project
 
 - Go to [Supabase](https://app.supabase.com/), create a project.
 - Go to `Settings > API` and note your `SUPABASE_URL`,  `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY`.
 
-### 2. Set Environment Variables
+### 3. Set Environment Variables
 
 In your local `.env` :
 SUPABASE_URL=https://<your-project>.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+SUPABASE_ANON_KEY=your-anon-key
