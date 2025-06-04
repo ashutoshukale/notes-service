@@ -62,8 +62,8 @@ curl -X POST https://<your-project_id>.functions.supabase.co/post_notes \
   
 Response:
   {
-  "id": "uuid",
-  "user_id": "uuid",
+  "id": "06f331d0-a4fj-44cd-ad29-73232fd679241",
+  "user_id": "07fa31e0-e4ee-40cb-ab29-75832b679345",
   "title": "My Note",
   "content": "This is the body of the note.",
   "created_at": "2025-06-03 17:12:30.343324+00",
@@ -79,7 +79,7 @@ Response:
 [
 
   {
-    "id": "uuid",
+    "id": "06f331d0-a4fj-44cd-ad29-73232fd679241",
     "title": "My Note",
     "content": "This is the body of the note.",
     "created_at": "2025-06-03 17:12:30.343324+00",
