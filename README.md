@@ -18,16 +18,73 @@ This is a lightweight Supabase backend service for managing personal notes. It s
 
 ### 1. Clone the repo
 
-- git clone 
+- git clone https://github.com/ashutoshukale/notes-service.git
 - cd notes-service
-### 2. Create Supabase Project
+
+### 2. Install Supabase 
+
+- npm install -g supabase
+- npm install supabase@/supabase-js@2.24.3
+
+### 3. Create Supabase Project
 
 - Go to [Supabase](https://app.supabase.com/), create a project.
 - Go to `Settings > API` and note your `SUPABASE_URL`,  `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY`.
 
-### 3. Set Environment Variables
+### 4. Set Environment Variables
 
 In your local `.env` :
 SUPABASE_URL=https://<your-project>.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 SUPABASE_ANON_KEY=your-anon-key
+
+### 5. Start Local Supabase for Development (Optional)
+
+- supabase start
+
+### 6. Apply Database Schema
+
+- supabase login
+- supabase db push
+
+### 7. Deploy Edge Functions
+
+- supabase functions deploy post_notes
+- supabase functions deploy get_notes
+
+### 8. API Demo
+#### 1.  Create Note - post_notes
+
+curl -X POST https://<your-project_id>.functions.supabase.co/post_notes \
+  -H "Authorization: Bearer <anon_key>" \
+  -H "Content-Type: application/json" \
+  -d '{"title": "My Note", "content": "This is the body of the note."}'
+  
+- Response:
+  {
+  "id": "uuid",
+  "user_id": "uuid",
+  "title": "My Note",
+  "content": "This is the body of the note.",
+  "created_at": "...",
+  "updated_at": "..."
+}
+
+#### 2.  Get Notes -get_notes
+
+curl -X POST https://<your-project_id>.functions.supabase.co/post_notes \
+  -H "Authorization: Bearer <anon_key>" \
+  
+- Response:
+[
+
+  {
+    "id": "uuid",
+    "title": "My Note",
+    "content": "This is the body of the note.",
+    "created_at": "...",
+    "updated_at": "..."
+  },
+  
+]
+
