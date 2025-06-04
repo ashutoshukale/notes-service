@@ -60,30 +60,30 @@ curl -X POST https://<your-project_id>.functions.supabase.co/post_notes \
   -H "Content-Type: application/json" \
   -d '{"title": "My Note", "content": "This is the body of the note."}'
   
-- Response:
+Response:
   {
   "id": "uuid",
   "user_id": "uuid",
   "title": "My Note",
   "content": "This is the body of the note.",
-  "created_at": "...",
-  "updated_at": "..."
+  "created_at": "2025-06-03 17:12:30.343324+00",
+  "updated_at": "2025-06-03 17:12:30.343324+00"
 }
 
 #### 2.  Get Notes -get_notes
 
-curl -X POST https://<your-project_id>.functions.supabase.co/post_notes \
+curl -X POST https://<your-project_id>.functions.supabase.co/get_notes \
   -H "Authorization: Bearer <anon_key>" \
   
-- Response:
+Response:
 [
 
   {
     "id": "uuid",
     "title": "My Note",
     "content": "This is the body of the note.",
-    "created_at": "...",
-    "updated_at": "..."
+    "created_at": "2025-06-03 17:12:30.343324+00",
+    "updated_at": "2025-06-03 17:12:30.343324+00"
   },
   
 ]
