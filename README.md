@@ -34,9 +34,9 @@ This is a lightweight Supabase backend service for managing personal notes. It s
 ### 4. Set Environment Variables
 
 In your local `.env` :
-SUPABASE_URL=https://<your-project>.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-SUPABASE_ANON_KEY=your-anon-key
+- SUPABASE_URL=https://<your-project>.supabase.co
+- SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+- SUPABASE_ANON_KEY=your-anon-key
 
 ### 5. Start Local Supabase for Development (Optional)
 
